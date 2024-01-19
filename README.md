@@ -57,21 +57,21 @@ In your terminal, paste this command:
 
 Now you have all my functions.
 To use it, you can do reply this code:
-> _ #include "libft.h"
-> 	int	main(int ac, char **av) {
-> 		/* your C code will be here! */
-> 		return (0);
-> 	}_
+> _#include "libft.h"
+	int	main(int ac, char **av) {
+ 		/* your C code will be here! */
+ 		return (0);
+ 	}_
 
 Before you compile your code, type "make" to compile all my functions and create the "libft.a" file. This one is important! Dont forget that!
 
 Now you are able to compile your code. 
 Here is an example for you to compile: 
-> _ cc your_file.c libft.a_
+> _cc your_file.c libft.a_
 
 Then execute it:
 
-> _ ./a.out_
+> _./a.out
 
 Hope this little guide can help you to use my libft! 
 Fell welcome to get in touch with me on my social medias! 
