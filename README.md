@@ -53,7 +53,7 @@ This is my first project from my common core journey, as a cadet, at 42 RIO._
 ## Want to use or even test my libft? 
 
 In your terminal, paste this command:
-> _ git clone https://github.com/PradoAllan/Libft.git_
+> git clone https://github.com/PradoAllan/Libft.git
 
 Now you have all my functions.
 To use it, you can do reply this code:
