@@ -1,43 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aprado <aprado@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 17:40:16 by aprado            #+#    #+#             */
-/*   Updated: 2024/01/23 18:06:15 by aprado           ###   ########.fr       */
+/*   Created: 2023/12/03 13:58:55 by aprado            #+#    #+#             */
+/*   Updated: 2024/01/31 07:57:53 by aprado           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int	ft_lstsize(t_list *lst)
 {
-	if (new)
+	int	node_qtd;
+
+	node_qtd = 0;
+	if (lst)
 	{
 		while (lst)
 		{
-			if (lst == NULL)
-				lst->next = new;
+			node_qtd++;
 			lst = lst->next;
 		}
 	}
-}
-*/
-
-void	ft_listadd_back(t_list **lst, t_list *new)
-{
-	t_list last;
-
-	if (!lst)
-		return ;
-	if (*lst == NULL)
-	{
-		*lst = new;
-		return ;
-	}
-	last = ft_lstlast(*lst);
-	last->next = new;
+	return (node_qtd);
 }
