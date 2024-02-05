@@ -6,7 +6,7 @@
 /*   By: aprado <aprado@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:17:41 by aprado            #+#    #+#             */
-/*   Updated: 2023/11/18 12:09:50 by aprado           ###   ########.fr       */
+/*   Updated: 2024/02/05 18:38:30 by aprado           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -41,7 +41,7 @@ static unsigned int	count_words(char const *s, char c, unsigned int i)
 static void	freeall(char **matrix, unsigned int i)
 {
 	i--;
-	while (i >= 0)
+	while ((int)i >= 0)
 	{
 		free(matrix[i]);
 		i--;

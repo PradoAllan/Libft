@@ -5,6 +5,7 @@ CC = cc
 FLAGS = -Wall -Wextra -Werror
 
 SOURCES = src/ft_atoi.c \
+	  	src/ft_atol.c \
 		src/ft_bzero.c \
 		src/ft_calloc.c \
 		src/ft_isalnum.c \

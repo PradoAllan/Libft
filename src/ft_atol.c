@@ -1,43 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aprado <aprado@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 17:40:16 by aprado            #+#    #+#             */
-/*   Updated: 2024/02/05 18:39:50 by aprado           ###   ########.fr       */
+/*   Created: 2024/02/05 18:18:27 by aprado            #+#    #+#             */
+/*   Updated: 2024/02/05 18:19:13 by aprado           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-void	ft_lstadd_back(t_list **lst, t_list *new)
+long	ft_atol(const char *nptr)
 {
-	if (new)
-	{
-		while (lst)
-		{
-			if (lst == NULL)
-				lst->next = new;
-			lst = lst->next;
-		}
-	}
-}
-*/
+	long	nbr;
+	int		i;
+	int		sign;
 
-void	ft_listadd_back(t_list **lst, t_list *new)
-{
-	t_list	*last;
-
-	if (!lst)
-		return ;
-	if (*lst == NULL)
+	nbr = 0;
+	sign = 1;
+	i = 0;
+	while ((nptr[i] == ' ') || (nptr[i] >= '\t' && nptr[i] <= '\r'))
+		i++;
+	if (nptr[i] == 43 || nptr[i] == 45)
 	{
-		*lst = new;
-		return ;
+		if (nptr[i] == 45)
+			sign = sign * -1;
+		i++;
 	}
-	last = ft_lstlast(*lst);
-	last->next = new;
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		nbr = nbr * 10 + (nptr[i] - 48);
+		i++;
+	}
+	return (nbr * sign);
 }

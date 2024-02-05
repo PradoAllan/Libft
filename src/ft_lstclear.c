@@ -6,7 +6,7 @@
 /*   By: aprado <aprado@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:14:30 by aprado            #+#    #+#             */
-/*   Updated: 2024/01/23 18:28:02 by aprado           ###   ########.fr       */
+/*   Updated: 2024/02/05 18:39:30 by aprado           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *aux;
+	t_list	*aux;
 
 	if (!lst)
 		return ;
